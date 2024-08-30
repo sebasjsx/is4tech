@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+.grid {
+    background-color: #eeeeee;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    font-size: 24px;
+    /*Me crea primero 6 filas con un tamaño especifico luego 8 automaticas
+    luego me hace 1 columna con tamaño especifico, luego 1 auto, y luego 8 auto*/
+    grid-template: 3% 3% 4% 4% 6% 6% repeat(8, auto)/ 5% auto repeat(8, auto);
+}   
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+    /* fila inicial / colunma inicial / fila cierre / columna cierre
+    hasta este layout descubri que se podian los 2 en 1 jaja:)*/
+    grid-area: 1 / 1 / 15 / 3;
+    background-color: #2b2e3f;
+    color: #ffffff;
+}
+
+.b {
+    grid-area: 1 / 3 / 3 / 11;
+    margin: 0 0 10px 0;
+    background-color: #ffffff;
+}
+
+.c {
+    grid-area: 3 / 3 / 5 / 11;
+    margin: 8px;
+    background-color: #ffffff;
+}
+
+.d {
+    grid-area: 5 / 3 / 7 / 5;
+    margin: 10px 8px;
+    border-radius: 10px;
+    background-color: #01ca84;
+}
+
+.e {
+    grid-area: 5 / 5 / 7 / 7;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #00a8fb;
+}
+
+.f{
+    grid-area: 5 / 7 / 7 / 9;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #ff416c;
+}
+
+.g {
+    grid-area: 5 / 9 / 7 / 11;
+    margin: 10px 8px;
+    border-radius: 10px;
+    background-color: #ff9a00;
+}
+
+.h {
+    grid-area: 7 / 3 / 11 / 7;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
+
+.i {
+    grid-area: 7 / 7 / 10 / 9;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
+
+.j {
+    grid-area: 7 / 9 / 10 / 11;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
+
+.k {
+    grid-area: 10 / 7 / 11 / 11;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
+
+.l {
+    grid-area: 11 / 3 / 15 / 8;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
+
+.m {
+    grid-area: 11 / 8 / 15 / 11;
+    margin: 10px 8px;
+    background-color: #ffffff;
+}
