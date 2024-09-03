@@ -1,0 +1,77 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+@import '../helpers/functions';
+
+.contact_section {
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 45px;
+    }
+
+    .form_container {
+        padding: 0 45px;
+
+        input {
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+            border: none;
+            border-bottom: 1px solid #363535;
+            outline: none;
+
+            &.message_input {
+                margin-top: 45px;
+            }
+
+            &::-webkit-input-placeholder,
+            &:-ms-input-placeholder,
+            &::-ms-input-placeholder,
+            &::placeholder {
+                color: rgba(35, 9, 9, 0.6);
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid $color-skyblue;
+            color: $color-skyblue;
+            text-transform: uppercase;
+            padding: $padding-button-send;
+            border-radius: 25px;
+            margin-top: 45px;
+        }
+    }
+
+    .contact_box {
+        margin-top: 35px;
+
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            @include webkit;
+            color: #363535;
+            margin: 15px 0;
+
+            .img-box {
+                width: 45px;
+                height: 45px;
+                padding: 10px;
+                border: 1px solid #363535;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                @include webkit;
+                margin-right: 15px;
+
+                img {
+                    width: $width-img;
+                }
+            }
+        }
+    }
+}

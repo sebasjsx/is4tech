@@ -1,0 +1,56 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.client_section {
+
+    .heading_container {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .box {
+        width: 75%;
+        margin: 90px auto;
+
+        .client_id {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            @include webkit;
+
+            h4 {
+                margin: 0;
+                margin-left: 15px;
+            }
+            
+        }
+
+        .detail-box {
+            margin-top: 30px;
+        }
+    }
+
+    .carousel-indicators {
+        margin: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        bottom: -15px;
+
+        li {
+            margin: 0 3px;
+            width: 20px;
+            height: 20px;
+            opacity: 1;
+            background-color: $color-skyblue;
+            border-radius: 100%;
+
+            &.active {
+                background-color: #252525;
+            }
+        }
+    }
+}
+
+

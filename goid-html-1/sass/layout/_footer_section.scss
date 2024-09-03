@@ -1,0 +1,48 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.footer_section {
+    padding: 20px;
+    background-color: #252525;
+
+    .social_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        @include webkit;
+        margin: 25px 0;
+
+        h4 {
+            color: #a9a6a6;
+            font-weight: bold;
+        }
+
+        .social_box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            a {
+                margin: 0 10px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        text-align: center;
+        color: $color-white;
+    }
+
+    a {
+        color: $color-white;
+    }
+}

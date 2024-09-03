@@ -1,0 +1,110 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.hot_section {
+    .carousel_container {
+        border: 1px solid #c2c2c2;
+        padding: 45px 0 15px 0;
+        margin-top: 30px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .heading_container h2 {
+        margin-bottom: 0;
+    }
+
+    .box {
+        text-align: center;
+
+        .img-box {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            @include webkit;
+            height: 135px;
+
+            img {
+                width: 75%;
+            }
+        }
+
+        .detail-box {
+            margin-top: 35px;
+
+            p {
+                margin-top: 10px;
+            }
+
+            a {
+                display: inline-block;
+                padding: 7px 20px;
+                background-color: $color-brown;
+                color: $color-white;
+                border: 1px solid $color-brown;
+                margin-top: 5px;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $color-brown;
+                }
+            }
+        }
+    }
+
+    .carousel-wrap {
+        margin: 0 auto;
+        padding: 0 5%;
+        position: relative;
+    }
+
+    .owl-nav>div {
+        margin-top: -26px;
+        position: absolute;
+        top: 50%;
+        color: #cdcbcd;
+    }
+
+    .owl-carousel {
+        .owl-nav {
+
+            .owl-prev, .owl-next {
+                width: 50px;
+                height: 50px;
+                background-color: $color-skyblue;
+                background-size: 9px;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                outline: none;
+            }
+
+            .owl-prev:hover, .owl-next:hover {
+                background-color: #252525;
+            }
+
+            .owl-prev {
+                background-image: url(../images/left-angle.png);
+                left: -10%;
+            }
+
+            .owl-next {
+                right: -10%;
+                background-image: url(../images/right-angle.png);
+            }
+        }
+
+        .owl-dots.disabled,
+        .owl-nav.disabled {
+            display: block;
+        }
+    }
+}
+

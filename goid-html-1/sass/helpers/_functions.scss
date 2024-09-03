@@ -1,0 +1,6 @@
+//funciones
+$width-complete: 1;
+
+$padding-button-send: join($padding1 , $padding2 ); //funcion para unir cadenas
+//100% en imagenes de contact_section
+$width-img: percentage($width-complete); //funcion convertir ese valor a porcentaje

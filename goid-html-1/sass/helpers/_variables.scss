@@ -1,0 +1,27 @@
+//variables
+$color-brown: #262626;
+$color-skyblue: #51b5ef;
+$color-white: #ffffff;
+$padding1: 6px;
+$padding2: 40px;
+
+//operaciones
+$mb: 5px * 7;
+$mt: 100px / 5;
+
+//extend
+.background-app-section {
+    background-image: url(../images/app-bg.jpg);
+    background-size: 100% 86%;
+    background-repeat: no-repeat;
+    color: $color-white;
+    background-position: bottom;
+}
+
+.label-subscribe-section {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-white;
+    margin: 0;
+}

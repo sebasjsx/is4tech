@@ -1,0 +1,47 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.app_section {
+    @extend .background-app-section;
+
+    .row {
+        @include webkit;
+    }
+
+    .img-box img {
+        width: 100%;
+    }
+
+    .detail-box {
+        padding-top: 60px;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: $mb;
+
+            span {
+                font-size: 1.5em;
+            }
+        }
+
+        p {
+            color: $color-white;
+        }
+
+        .btn-box {
+            margin-top: 35px;
+
+            
+            a {
+                margin-right: 10px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
