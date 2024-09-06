@@ -1,0 +1,16 @@
+.content {
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-top: 10px;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

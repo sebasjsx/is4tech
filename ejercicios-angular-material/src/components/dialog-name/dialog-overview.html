@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+  <p>Escribe tu nombre</p>
+  <mat-form-field>
+    <mat-label>Tu nombre</mat-label>
+    <input matInput [formControl]="nameValid"/>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button 
+          [mat-dialog-close]="name()" 
+          [disabled]="nameValid.invalid" 
+          cdkFocusInitial>
+    Aceptar
+  </button>
+</mat-dialog-actions>

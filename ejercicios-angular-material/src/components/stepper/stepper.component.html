@@ -1,0 +1,63 @@
+<div class="content">
+    <mat-stepper>
+        <mat-step label="Fecha de nacimiento" state="birthdate">
+            <p>Ingresa tu fecha de nacimiento</p>
+            <mat-form-field>
+                <mat-label>Seleccionar fecha</mat-label>
+                <input matInput [matDatepicker]="picker" [max]="maxDate" [formControl]="birthdate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext [disabled]="birthdate.invalid">Siguiente</button>
+            </div>
+        </mat-step>
+        <mat-step label="Nombre" state="name">
+            <p>Ingresa tu nombre</p>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Escribe tu nombre</mat-label>
+                    <input matInput placeholder="Ex. Sebastian Abad" [formControl]="name">
+                </mat-form-field>
+            </form>
+            <div>
+                <button mat-button matStepperPrevious>Regresar</button>
+                <button mat-button matStepperNext [disabled]="name.invalid">Siguiente</button>
+            </div>
+        </mat-step>
+        <mat-step label="DPI" state="dpi">
+            <mat-button-toggle-group [formControl]="dpiToggle" aria-label="DPI Toggle">
+                <mat-button-toggle [value]="false">No</mat-button-toggle>
+                <mat-button-toggle [value]="true">Si</mat-button-toggle>
+            </mat-button-toggle-group>
+
+            <p>Si aplica para DPI marque "Si"</p>
+            <mat-form-field class="example-full-width">
+                <mat-label *ngIf="dpiToggle.value">Escribe tu DPI</mat-label>
+                <input matInput placeholder="Ex. 2320556340103" [formControl]="dpi">
+            </mat-form-field>
+
+            <div>
+                <button mat-button matStepperPrevious>Regresar</button>
+                <button mat-button matStepperNext [disabled]="dpiToggle.value && dpi.invalid">Siguiente</button>
+            </div>
+        </mat-step>
+        <mat-step label="Terminar" state="done">
+            <p>Terminado.</p>
+        </mat-step>
+
+        <ng-template matStepperIcon="birthdate">
+            <mat-icon>date_range</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="name">
+            <mat-icon>assignment</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="dpi">
+            <mat-icon>perm_identity</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="done">
+            <mat-icon>done</mat-icon>
+        </ng-template>
+    </mat-stepper>
+</div>

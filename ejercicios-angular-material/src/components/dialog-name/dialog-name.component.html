@@ -1,0 +1,14 @@
+<div class="content">
+  <div>
+    <button mat-fab (click)="openDialog()">
+      <mat-icon>visibility</mat-icon>
+    </button>
+  </div>
+  @if (name()) {
+  <div>
+    <h1>
+      Hola <em>{{name()}}</em>
+    </h1>
+  </div>
+  }
+</div>
