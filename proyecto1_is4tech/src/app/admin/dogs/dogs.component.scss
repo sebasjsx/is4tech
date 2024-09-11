@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border-radius: 30px;
+    margin-top: 20px;
+    max-width: 400px;
+    max-height: 250px;
+}
+
+button {
+    margin-top: 10px;
+    width: auto;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: #288ae5;
+    font-size: 20px;
+    color: white;   
+}
+
+textarea {
+    background-color: #288ae5 ;
+    color: #000;
+
+    &::placeholder {
+        color: #4d4d4d;
+    }
+}

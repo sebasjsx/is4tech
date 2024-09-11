@@ -1,0 +1,9 @@
+<div class="container">
+    <img [src]="dogImageUrl" />
+    <button (click)="updateImg()">Recargar</button>
+</div>
+<textarea [(ngModel)]="text" appWhiteSpaceDirective (textChanged)="onTextChanged($event)"
+    placeholder="Escribe algo aquí..."></textarea>
+<h1>{{ text }}</h1>
+<h5>Por lo que investigue los navegadores quitan los espacios en blanco por defecto, para ver el funcionamiento de la
+    directiva se puede ver en la consola.</h5>
