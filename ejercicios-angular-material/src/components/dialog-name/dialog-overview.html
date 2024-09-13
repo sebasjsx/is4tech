@@ -9,7 +9,7 @@
 <mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancelar</button>
   <button mat-button 
-          [mat-dialog-close]="name()" 
+          [mat-dialog-close]="nameValid.value" 
           [disabled]="nameValid.invalid" 
           cdkFocusInitial>
     Aceptar

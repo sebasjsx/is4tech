@@ -39,7 +39,6 @@ export interface DialogData {
 })
 export class DialogNameComponent {
   readonly name = signal('');
-  readonly title = model('Hola este es el titulo del modal');
   readonly dialog = inject(MatDialog);
 
   openDialog(): void {
@@ -73,11 +72,14 @@ export class DialogNameComponent {
   ],
 })
 export class DialogOverviewExampleDialog {
-  nameValid = new FormControl('', Validators.required);
+  nameValid: FormControl;
 
   readonly dialogRef = inject(MatDialogRef<DialogOverviewExampleDialog>);
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);
-  readonly name = model(this.data.name);
+
+  constructor() {
+    this.nameValid = new FormControl(this.data.name, Validators.required);
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
